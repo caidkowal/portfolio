@@ -1,22 +1,19 @@
-import RotatingSphere from "./components/RotatingSphere";
+import Sphere from "./components/Sphere";
 
 export default function Home() {
   return (
+    <main className="h-screen bg-black text-white relative">
 
-    <main className="min-h-screen bg-black-900 text-white">
+      {/* NAME AT TOP */}
+      <h1 className="absolute top-10 w-full text-center text-3xl ">
+        caiden kowalchuk
+      </h1>
 
-    
-    <div className="flex items-center justifiy-center h-screen">
-      <div>
-        <RotatingSphere />
-        </div>
-
-        <h1 className="flex items-start justify-center h-screen">
-          caiden kowalchuk
-        </h1>
+      {/* SPHERE PERFECT CENTER */}
+      <div className="h-full flex items-center justify-center">
+        <Sphere />
       </div>
 
     </main>
   );
-  
 }
