@@ -15,18 +15,18 @@ function Sphere({ currentSection }: { currentSection: string }) {
   const earthTexture = useTexture("./images/earth.jpg");
   const faceTexture = useTexture("./images/roll3.jpg"); // Add your face image
   
-  // Switch texture based on current section
+  // switch texture based on current section
   const currentTexture = currentSection === 'about' ? faceTexture : earthTexture;
 
   //update the frame overtime, this will run every frame
   useFrame( () => {
     if(SphereRef.current) 
-    SphereRef.current.rotation.y  += 0.002;
+    SphereRef.current.rotation.y  += 0.005;
   } )
 
   return(
     <mesh ref={SphereRef} rotation={[0, 0, 0.4]}>
-      <sphereGeometry args={[2.5, 300, 500]} />
+      <sphereGeometry args={[2.5, 800, 800]} />
       <meshStandardMaterial
         map={currentTexture}  // Use the dynamic texture
         color="#ffffff"

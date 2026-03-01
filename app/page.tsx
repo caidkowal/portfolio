@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import App from "./components/Sphere";
-import Link from 'next/link'
 
 export default function Home() {
 
@@ -31,7 +30,7 @@ export default function Home() {
 
   return (
 
-    <main className="flex">
+    <main className="flex overflow-x-hidden">
 
       {/* LEFT SIDE */}
       <div className="fixed h-screen bg-black text-white w-1/2">
@@ -59,43 +58,39 @@ export default function Home() {
           <div className="p-10">
             <div className="border border-blue-500/30 rounded-2xl inline-block px-8 py-4"
                 style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-              <h2 className="text-9xl text-blue-600 mb-4">hi!</h2>
-              <p className="text-4xl text-gray-300">welcome to my portfolio</p>
+              <h2 className="text-5xl text-blue-600 mb-4">hi!</h2>
+              <p className="text-2xl text-gray-300">welcome to my portfolio</p>
             </div>
           </div>
         </section>
 
-        <section id="about" className="min-h-screen p-10 flex  mt-30">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm min-w-3xl"
+        <section id="about" className="min-h-screen p-10 flex mt-10">
+          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-6xl text-blue-600 mb-4">About me</h2>
-            <p className="text-3xl text-gray-300"> I'm a second-year Computer Science student at the University of Guelph.
-              <br />
-              <br />
-              I am passionate about having an idea in the noggin and be able to make something tangle from it, progamming is just one of the ways
-              i can do that
-              <br />
-              <br />
-              I love adventuring, whether thats backpacking the bruce crest trail for a night or two or travelling overseas, i just cant
-              help but love being put in a tricky situiation and making the best out of it
-
+            <h2 className="text-4xl text-blue-600 mb-4">About me</h2>
+            <p className="text-xl text-gray-300 break-words whitespace-normal">
+              I'm a second-year Computer Science student at the University of Guelph.
+              <br /><br />
+              I am passionate about having an idea in the noggin and being able to make something tangible from it, programming is just one of the ways I can do that
+              <br /><br />
+              I love adventuring, whether thats backpacking the bruce crest trail for a night or two or travelling overseas. I just cant help but love being put in a tricky situation and making the best out of it
             </p>
           </div>
         </section>
 
-        <section id="projects" className="min-h-screen p-10 flex  mt-30">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm min-w-3xl"
+<section id="projects" className="min-h-screen p-10 flex mt-10">
+          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-6xl text-blue-600 mb-4">Projects</h2>
-            <p className="text-3xl text-gray-300">...</p>
+            <h2 className="text-4xl text-blue-600 mb-4">Projects</h2>
+            <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
           </div>
         </section>
 
-        <section id="contact" className="min-h-screen p-10 flex  mt-30">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm min-w-3xl"
+        <section id="contact" className="min-h-screen p-10 flex mt-10">
+          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-6xl text-blue-600 mb-4">Contact</h2>
-            <p className="text-3xl text-gray-300">...</p>
+            <h2 className="text-4xl text-blue-600 mb-4">Contact</h2>
+            <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
           </div>
         </section>
 
