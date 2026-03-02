@@ -47,7 +47,7 @@ export default function Home() {
         <div className="h-full flex items-center justify-center">
           <div className="w-full h-full flex flex-col items-center justify-center gap-8">
             {/* NAME ABOVE GLOBE */}
-            <h1 className="text-4xl text-blue-600" 
+            <h1 className="text-4xl text-slate-300" 
               style={{ textShadow: '0 0 20px #60a5fa, 0 0 40px #1f508c' }}>
               caiden kowalchuk
             </h1>
@@ -64,19 +64,19 @@ export default function Home() {
       <div className="ml-[50%] w-1/2 bg-transparent text-white z-10">
 
         {/* FLOATING HEADER */}
-        <nav className="fixed top-6 right-6 w-[calc(50%-3rem)] bg-black/40 backdrop-blur-md border border-blue-500/30 rounded-2xl z-50 px-10 py-6"
+        <nav className="fixed top-6 right-6 w-[calc(50%-3rem)] bg-black/40 backdrop-blur-md border border-slate-500/30 rounded-2xl z-50 px-10 py-6"
             style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
           <div className="flex gap-8 justify-center">
-            <a href="#home" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+            <a href="#home" className="text-xl text-slate-500 hover:text-slate-400 transition-colors">
               Home
             </a>
-            <a href="#about" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+            <a href="#about" className="text-xl text-slate-500 hover:text-slate-400 transition-colors">
               About
             </a>
-            <a href="#projects" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+            <a href="#projects" className="text-xl text-slate-500 hover:text-slate-400 transition-colors">
               Projects
             </a>
-            <a href="#contact" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+            <a href="#contact" className="text-xl text-slate-500 hover:text-slate-400 transition-colors">
               Contact
             </a>
           </div>
@@ -84,18 +84,18 @@ export default function Home() {
 
         <section id="home" className="min-h-screen p-10 flex flex-col justify-center mt-10" style={{ scrollMarginTop: '80px' }}>
           <div className="p-10">
-            <div className="bg-black/30 backdrop-blur-md border border-blue-500/30 rounded-2xl inline-block px-8 py-4"
+            <div className="bg-black/30 backdrop-blur-md border border-slate-500/30 rounded-2xl inline-block px-8 py-4  items-center"
                 style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-              <h2 className="text-5xl text-blue-600 mb-4">hi!</h2>
+              <h2 className="text-5xl text-amber-500 mb-4">hi!</h2>
               <p className="text-2xl text-gray-300">welcome to my portfolio</p>
             </div>
           </div>
         </section>
 
         <section id="about" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
-          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
+          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-slate-500/30 w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-4xl text-blue-600 mb-4">About me</h2>
+            <h2 className="text-4xl text-slate-600 mb-4">About me</h2>
             <p className="text-xl text-gray-300 break-words whitespace-normal">
               I'm a second-year Computer Science student at the University of Guelph.
               <br /><br />
@@ -106,18 +106,73 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
-          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
-              style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-4xl text-blue-600 mb-4">Projects</h2>
-            <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
+      <section id="projects" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
+        <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-slate-500/30 w-full"
+            style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
+          <h2 className="text-4xl text-slate-600 mb-8">Projects</h2>
+
+          <div className="flex flex-col gap-6">
+
+            {/* PROJECT 1 */}
+            <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
+                style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
+                onClick={() => window.open('https://github.com/pedro-boudoux/gryph-planner', '_blank')}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-400 transition-colors">GryphPlanner</h3>
+                  <p className="text-gray-300 text-lg">Gryph Planner — Built at GDSC Hacks 2025. A web app that scans course outlines and extracts academic deadlines, letting users sync directly to Google Calendar via OAuth2. I mostly worked on the frontend development in React, building the UI and integrating 
+                    it with a Node.js backend REST API that handled file uploads, downloads, and the Google Calendar API.</p>
+                </div>
+                <span className="text-slate-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
+              </div>
+              <div className="flex gap-3 mt-4">
+                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">React</span>
+                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">Node.js</span>
+              </div>
+            </div>
+
+            {/* PROJECT 2 */}
+            <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
+                style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
+                onClick={() => window.open('https://github.com/yourusername/project2', '_blank')}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">Project Two</h3>
+                  <p className="text-gray-300 text-lg">Short description of what this project does and what tech you used.</p>
+                </div>
+                <span className="text-blue-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
+              </div>
+              <div className="flex gap-3 mt-4">
+                <span className="text-sm px-3 py-1 rounded-full border border-blue-500/40 text-blue-400">Python</span>
+                <span className="text-sm px-3 py-1 rounded-full border border-blue-500/40 text-blue-400">Flask</span>
+              </div>
+            </div>
+
+            {/* PROJECT 3 */}
+            <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
+                style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
+                onClick={() => window.open('https://github.com/yourusername/project3', '_blank')}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">Project Three</h3>
+                  <p className="text-gray-300 text-lg">Short description of what this project does and what tech you used.</p>
+                </div>
+                <span className="text-blue-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
+              </div>
+              <div className="flex gap-3 mt-4">
+                <span className="text-sm px-3 py-1 rounded-full border border-blue-500/40 text-blue-400">C</span>
+                <span className="text-sm px-3 py-1 rounded-full border border-blue-500/40 text-blue-400">Linux</span>
+              </div>
+            </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
         <section id="contact" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
-          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
+          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-slate-500/30 w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
-            <h2 className="text-4xl text-blue-600 mb-4">Contact</h2>
+            <h2 className="text-4xl text-slate-600 mb-4">Contact</h2>
             <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
           </div>
         </section>
