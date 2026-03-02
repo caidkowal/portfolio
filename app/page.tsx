@@ -54,6 +54,25 @@ export default function Home() {
       {/* RIGHT SIDE */}
       <div className="ml-[50%] w-1/2 bg-transparent text-white">
 
+        {/* FLOATING HEADER */}
+        <nav className="fixed top-6 right-6 w-[calc(50%-3rem)] bg-black/80 backdrop-blur-sm border border-blue-500/30 rounded-2xl z-50 px-10 py-6"
+            style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
+          <div className="flex gap-8 justify-center">
+            <a href="#home" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+              Home
+            </a>
+            <a href="#about" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+              About
+            </a>
+            <a href="#projects" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+              Projects
+            </a>
+            <a href="#contact" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
+              Contact
+            </a>
+          </div>
+        </nav>
+
         <section id="home" className="min-h-screen p-10 flex flex-col justify-center mt-30">
           <div className="p-10">
             <div className="border border-blue-500/30 rounded-2xl inline-block px-8 py-4"
