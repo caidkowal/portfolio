@@ -7,12 +7,10 @@ export default function Home() {
 
   const [currentSection, setCurrentSection] = useState('home');
 
-  // Scroll listener to detect which section is visible
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       
-      // Get section positions (adjust these values based on your layout)
       if (scrollY < window.innerHeight) {
         setCurrentSection('home');
       } else if (scrollY >= window.innerHeight && scrollY < window.innerHeight * 2) {
@@ -30,10 +28,21 @@ export default function Home() {
 
   return (
 
-    <main className="flex overflow-x-hidden">
+    <main className="flex overflow-x-hidden relative">
+
+      {/* BACKGROUND IMAGE */}
+      <div className="fixed inset-0 z-0">
+        <img 
+          src="./images/paris.jpg" 
+          alt="background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay so text stays readable */}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
 
       {/* LEFT SIDE */}
-      <div className="fixed h-screen bg-black text-white w-1/2">
+      <div className="fixed h-screen text-white w-1/2 z-10">
         {/* SPHERE AND NAME CONTAINER */}
         <div className="h-full flex items-center justify-center">
           <div className="w-full h-full flex flex-col items-center justify-center gap-8">
@@ -43,7 +52,7 @@ export default function Home() {
               caiden kowalchuk
             </h1>
             
-            {/* SPHERE - PASS THE PROP HERE */}
+            {/* SPHERE */}
             <div className="w-full h-2/3">
               <App currentSection={currentSection} />
             </div>
@@ -52,10 +61,10 @@ export default function Home() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="ml-[50%] w-1/2 bg-transparent text-white">
+      <div className="ml-[50%] w-1/2 bg-transparent text-white z-10">
 
         {/* FLOATING HEADER */}
-        <nav className="fixed top-6 right-6 w-[calc(50%-3rem)] bg-black/80 backdrop-blur-sm border border-blue-500/30 rounded-2xl z-50 px-10 py-6"
+        <nav className="fixed top-6 right-6 w-[calc(50%-3rem)] bg-black/40 backdrop-blur-md border border-blue-500/30 rounded-2xl z-50 px-10 py-6"
             style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
           <div className="flex gap-8 justify-center">
             <a href="#home" className="text-xl text-blue-500 hover:text-blue-400 transition-colors">
@@ -73,9 +82,9 @@ export default function Home() {
           </div>
         </nav>
 
-        <section id="home" className="min-h-screen p-10 flex flex-col justify-center mt-30">
+        <section id="home" className="min-h-screen p-10 flex flex-col justify-center mt-10" style={{ scrollMarginTop: '80px' }}>
           <div className="p-10">
-            <div className="border border-blue-500/30 rounded-2xl inline-block px-8 py-4"
+            <div className="bg-black/30 backdrop-blur-md border border-blue-500/30 rounded-2xl inline-block px-8 py-4"
                 style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
               <h2 className="text-5xl text-blue-600 mb-4">hi!</h2>
               <p className="text-2xl text-gray-300">welcome to my portfolio</p>
@@ -83,8 +92,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="min-h-screen p-10 flex mt-10">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
+        <section id="about" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
+          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
             <h2 className="text-4xl text-blue-600 mb-4">About me</h2>
             <p className="text-xl text-gray-300 break-words whitespace-normal">
@@ -97,16 +106,16 @@ export default function Home() {
           </div>
         </section>
 
-<section id="projects" className="min-h-screen p-10 flex mt-10">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
+        <section id="projects" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
+          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
             <h2 className="text-4xl text-blue-600 mb-4">Projects</h2>
             <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
           </div>
         </section>
 
-        <section id="contact" className="min-h-screen p-10 flex mt-10">
-          <div className="bg-black/50 p-10 rounded-2xl border border-blue-500/30 backdrop-blur-sm w-full"
+        <section id="contact" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
+          <div className="bg-black/30 backdrop-blur-md p-10 rounded-2xl border border-blue-500/30 w-full"
               style={{ boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}>
             <h2 className="text-4xl text-blue-600 mb-4">Contact</h2>
             <p className="text-xl text-gray-300 break-words whitespace-normal">...</p>
