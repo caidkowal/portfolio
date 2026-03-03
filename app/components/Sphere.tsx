@@ -13,7 +13,7 @@ function Sphere({ currentSection }: { currentSection: string }) {
   
   // Load both textures
   const earthTexture = useTexture("./images/earth.jpg");
-  const faceTexture = useTexture("./images/roll6.jpg"); // Add your face image
+  const faceTexture = useTexture("./images/r8.5.jpg"); // Add your face image
   
   // switch texture based on current section
   const currentTexture = currentSection === 'about' ? faceTexture : earthTexture;
@@ -25,11 +25,11 @@ function Sphere({ currentSection }: { currentSection: string }) {
   } )
 
   return(
-    <mesh ref={SphereRef} rotation={[0, 0, 0.4]}>
-      <sphereGeometry args={[2.5, 800 , 800]} />
+    <mesh ref={SphereRef} rotation={[0, 0, 0.05]}>
+      <sphereGeometry args={[2.5, 500 , 500]} />
       <meshStandardMaterial
         map={currentTexture}  // Use the dynamic texture
-        color="#ffffff"
+        color="#bbbbbb"
         wireframe={true}
        />
     </mesh>
