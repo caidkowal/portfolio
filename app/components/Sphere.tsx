@@ -26,7 +26,7 @@ function Sphere({ currentSection }: { currentSection: string }) {
 
   return(
     <mesh ref={SphereRef} rotation={[0, 0, 0.05]}>
-      <sphereGeometry args={[2.5, 500 , 500]} />
+      <sphereGeometry args={[2.5, 500 , 600]} />
       <meshStandardMaterial
         map={currentTexture}  // Use the dynamic texture
         color="#bbbbbb"
