@@ -125,7 +125,7 @@ export default function Home() {
                 onClick={() => window.open('https://github.com/pedro-boudoux/gryph-planner', '_blank')}>
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-400 transition-colors">GryphPlanner</h3>
+                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-300 transition-colors">GryphPlanner</h3>
                   <p className="text-gray-300 text-lg"> Built at GDSC Hacks 2025. A web app that scans course outlines and extracts academic deadlines, letting users sync directly to Google Calendar via OAuth2. I mostly worked on the frontend development in React, building the UI and integrating 
                     it with a Node.js backend REST API that handled file uploads, downloads, and the Google Calendar API.</p>
                 </div>
@@ -165,7 +165,7 @@ export default function Home() {
                 onClick={() => window.open('https://github.com/caidkowal/bmi_calculator', '_blank')}>
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-400 transition-colors">BMI Calculator</h3>
+                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-300 transition-colors">BMI Calculator</h3>
                   <p className="text-gray-300 text-lg">Built a Python project that analyzed body measurements, calculated BMI, and used graphs and linear regression to find strong trends in the data.</p>
                 </div>
                 <span className="text-slate-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
