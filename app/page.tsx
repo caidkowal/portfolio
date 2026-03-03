@@ -144,7 +144,7 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-300 transition-colors">Portfolio</h3>
-                  <p className="text-gray-300 text-lg">This website! I experimented with Next.js, Tailwind, Three.js (hence the spinning globe) and delpoyed it
+                  <p className="text-gray-300 text-lg">This website! I used with Next.js, Tailwind, Three.js and delpoyed it
                     with Vercel.
                   </p>
                 </div>
