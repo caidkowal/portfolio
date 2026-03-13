@@ -204,7 +204,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-300 transition-colors">Portfolio</h3>
                     <p className="text-gray-300 text-lg">
-                      This website! I used with Next.js, Tailwind, Three.js and delpoyed it with Vercel.
+                      This website! I used Next.js, Tailwind, Three.js and delpoyed it with Vercel.
                     </p>
                   </div>
                   <span className="text-slate-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
