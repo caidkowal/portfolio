@@ -122,6 +122,26 @@ export default function Home() {
             {/* PROJECT 1 */}
             <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-slate-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
                 style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
+                onClick={() => window.open('https://github.com/caidkowal/tr_game_engine', '_blank')}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-400 transition-colors">Treasure Runner Game Engine</h3>
+                  <p className="text-gray-300 text-lg">Terminal dungeon crawler built in C and Python as part of a university systems course. The C game engine is exposed via ctypes, with a curses-based UI following MVC.
+                    Implemented room traversal, pushable block puzzles, pressure switches, and an extensible portal system requiring careful API design.</p>
+                </div>
+                <span className="text-slate-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
+              </div>
+              <div className="flex gap-3 mt-4">
+                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">C</span>
+                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">Python</span>
+                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">curses</span>
+              </div>
+            </div>
+
+
+            {/* PROJECT 2 */}
+            <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-slate-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
+                style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
                 onClick={() => window.open('https://github.com/pedro-boudoux/gryph-planner', '_blank')}>
               <div className="flex items-center justify-between">
                 <div>
@@ -137,7 +157,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PROJECT 2 */}
+            {/* PROJECT 3 */}
             <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-slate-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
                 style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -158,27 +178,9 @@ export default function Home() {
               </div>
             </div>
 
-
-            {/* PROJECT 3 */}
-            <div className="group cursor-pointer bg-black/30 backdrop-blur-md border border-slate-500/30 rounded-2xl p-6 hover:border-blue-400 hover:bg-black/50 transition-all duration-300"
-                style={{ boxShadow: '0 0 15px rgba(96, 165, 250, 0.1)' }}
-                onClick={() => window.open('https://github.com/caidkowal/bmi_calculator', '_blank')}>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl text-slate-400 mb-2 group-hover:text-blue-400 transition-colors">BMI Calculator</h3>
-                  <p className="text-gray-300 text-lg">Built a Python project that analyzed body measurements, calculated BMI, and used graphs and linear regression to find strong trends in the data.</p>
-                </div>
-                <span className="text-slate-500 text-3xl group-hover:translate-x-2 transition-transform duration-300">→</span>
-              </div>
-              <div className="flex gap-3 mt-4">
-                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">Python</span>
-                <span className="text-sm px-3 py-1 rounded-full border border-slate-500/40 text-slate-400">NumPy</span>
-              </div>
-            </div>
-
-
           </div>
         </div>
+
       </section>
 
 <section id="contact" className="min-h-screen p-10 flex mt-10" style={{ scrollMarginTop: '80px' }}>
